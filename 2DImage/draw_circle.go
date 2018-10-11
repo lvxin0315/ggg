@@ -13,6 +13,8 @@ var colorR float64
 var colorG float64
 var colorB float64
 
+var pngSavePath string
+
 func init()  {
 	flag.IntVar(&width,"width",1000,"图片宽度")
 	flag.IntVar(&height,"height",1000,"图片高度")
@@ -20,6 +22,7 @@ func init()  {
 	flag.Float64Var(&colorR, "colorR", 255, "背景RGB")
 	flag.Float64Var(&colorG, "colorG", 255, "背景RGB")
 	flag.Float64Var(&colorB, "colorB", 255, "背景RGB")
+	flag.StringVar(&pngSavePath, "pngSavePath", "out.png", "文件保存path")
 	flag.Parse()
 }
 
@@ -29,5 +32,5 @@ func main() {
 	dc.SetRGB(colorR, colorG, colorB)
 
 	dc.Fill()
-	dc.SavePNG("out.png")
+	dc.SavePNG(pngSavePath)
 }

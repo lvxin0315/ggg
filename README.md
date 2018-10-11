@@ -10,7 +10,9 @@
         背景RGB (default 255)
   -height int
         图片高度 (default 1000)
-  -r float
+  -pngSavePath string
+        文件保存path (default "out.png")
+  -radius float
         原型半径 (default 400)
   -width int
         图片宽度 (default 1000)
