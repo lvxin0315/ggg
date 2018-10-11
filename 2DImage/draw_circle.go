@@ -3,34 +3,20 @@ package main
 import (
 	"github.com/fogleman/gg"
 	"flag"
+	. "ggg/2DImage/base"
 )
 
-var width int
-var height int
-var radius float64
-
-var colorR float64
-var colorG float64
-var colorB float64
-
-var pngSavePath string
-
-func init()  {
-	flag.IntVar(&width,"width",1000,"图片宽度")
-	flag.IntVar(&height,"height",1000,"图片高度")
-	flag.Float64Var(&radius,"radius",400,"原型半径")
-	flag.Float64Var(&colorR, "colorR", 255, "背景RGB")
-	flag.Float64Var(&colorG, "colorG", 255, "背景RGB")
-	flag.Float64Var(&colorB, "colorB", 255, "背景RGB")
-	flag.StringVar(&pngSavePath, "pngSavePath", "out.png", "文件保存path")
+func init() {
+	InitBG()
+	InitSavePath()
+	flag.Float64Var(&Radius, "radius", 400, "原型半径")
 	flag.Parse()
 }
 
 func main() {
-	dc := gg.NewContext(width,height)
-	dc.DrawCircle(	float64(width / 2), float64(width / 2), radius)
-	dc.SetRGB(colorR, colorG, colorB)
-
+	dc := gg.NewContext(Width, Height)
+	dc.SetRGB(ColorR, ColorG, ColorB)
+	dc.DrawCircle(float64(Width/2), float64(Width/2), Radius)
 	dc.Fill()
-	dc.SavePNG(pngSavePath)
+	dc.SavePNG(PngSavePath)
 }
