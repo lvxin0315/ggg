@@ -14,4 +14,7 @@ var X1 float64
 var Y1 float64
 var X2 float64
 var Y2 float64
+
 var LineWidth float64
+
+
