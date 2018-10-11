@@ -12,8 +12,8 @@ import (
 func init() {
 	InitBG()
 	InitSavePath()
-	flag.Float64Var(&X1, "x1", 500, "五角心中心x")
-	flag.Float64Var(&Y1, "y1", 500, "五角心中心y")
+	flag.Float64Var(&X1, "x1", 500, "五角星中心x")
+	flag.Float64Var(&Y1, "y1", 500, "五角星中心y")
 	flag.Float64Var(&Radius, "radius", 400, "原型半径")
 	flag.Float64Var(&LineWidth, "lineWidth", 5, "线宽")
 
