@@ -20,3 +20,6 @@ var LineWidth float64
 var TextContent string
 var TextWidth int
 var TextFontSize int
+
+var SrcPngPath string
+var PngFiler string
