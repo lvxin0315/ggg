@@ -1,5 +1,26 @@
 ### 2DImage
 
+- draw_text 文字生成图片工具
+```
+  -colorB float
+        内容RGB (default 255)
+  -colorG float
+        内容RGB (default 255)
+  -colorR float
+        内容RGB (default 255)
+  -height int
+        图片高度 (default 1000)
+  -pngSavePath string
+        文件保存path (default "out.png")
+  -text string
+        文本内容 (default "文本内容\n第二行")
+  -textFontSize int
+        字体大小 (default 100)
+  -width int
+        图片宽度 (default 1000)
+
+```
+
 - draw_circle 画圆工具
 ```
   -colorB float
@@ -17,7 +38,6 @@
   -width int
         图片宽度 (default 1000)
 ```
-
 
 - draw_line 画直线
 ```

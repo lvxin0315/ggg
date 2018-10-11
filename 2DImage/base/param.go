@@ -17,4 +17,6 @@ var Y2 float64
 
 var LineWidth float64
 
-
+var TextContent string
+var TextWidth int
+var TextFontSize int
